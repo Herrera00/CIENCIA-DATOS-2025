@@ -1,0 +1,373 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOotDqk6kDmjCK8OluqZu9n",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Herrera00/CIENCIA-DATOS-2025/blob/main/funciones%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#FUNCIONES Y TIPOS DE DATOS"
+      ],
+      "metadata": {
+        "id": "Cd73kLEpAkto"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1. Retornar el cuadro de un numero"
+      ],
+      "metadata": {
+        "id": "FUVVeFptAzBZ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def cuadrado (a):\n",
+        "  return a ** 2"
+      ],
+      "metadata": {
+        "id": "DHi7E7PCA3xo"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cuadrado2 = lambda a: a **2"
+      ],
+      "metadata": {
+        "id": "N-qUHm6uL-me"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "2. Retornar saludo personalizado\n"
+      ],
+      "metadata": {
+        "id": "Zm6oDiKzB1tX"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import random\n",
+        "\n",
+        "def saludo_personalizado(nombre):\n",
+        "    saludos = [\n",
+        "        \"¡Hola\", \"¡Qué gusto verte\", \"¡Buenos días\", \"¡Qué alegría,\",\n",
+        "        \"¡Saludos\", \"¡Hey\", \"¡Qué onda\", \"¡Bienvenido\", \"¡Hola hola\",\n",
+        "        \"¡Encantado de verte\", \"¡Un gusto saludarte\", \"¡Qué tal\",\n",
+        "        \"¡Buen día\", \"¡Hola de nuevo\", \"¡Qué placer verte\",\n",
+        "        \"¡Saludos cordiales\", \"¡Hola, compañero\", \"¡Hola, crack\",\n",
+        "        \"¡Te extrañábamos\", \"¡Hey hey\"\n",
+        "    ]\n",
+        "    return f\"{random.choice(saludos)} {nombre}!\""
+      ],
+      "metadata": {
+        "id": "JE289uRCCP6n"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import random\n",
+        "saludo_personalizado = lambda nombre: f\"{random.choice(['¡Hola', '¡Qué gusto verte', '¡Buenos días', '¡Qué alegría,', '¡Saludos', '¡Hey', '¡Qué onda', '¡Bienvenido', '¡Hola hola', '¡Encantado de verte', '¡Un gusto saludarte', '¡Qué tal', '¡Buen día', '¡Hola de nuevo', '¡Qué placer verte', '¡Saludos cordiales', '¡Hola, compañero', '¡Hola, crack', '¡Te extrañábamos', '¡Hey hey'])} {nombre}!\"\n"
+      ],
+      "metadata": {
+        "id": "nDmR4zlpMyel"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "3. Retornar suma, resta, multiplicacion y division de dos numero"
+      ],
+      "metadata": {
+        "id": "nGWSnCACE51c"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def operaciones(a, b):\n",
+        "    return a + b, a - b, a * b, a / b if b != 0 else None"
+      ],
+      "metadata": {
+        "id": "-0AHXV48I24i"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "operaciones = lambda a, b: (a + b, a - b, a * b, a / b if b != 0 else None)"
+      ],
+      "metadata": {
+        "id": "S6qG8SpYNAgt"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "4. Verificar si es mayor de edad"
+      ],
+      "metadata": {
+        "id": "udE7Os0KJLyo"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def es_mayor_de_edad(edad):\n",
+        "    return edad >= 18"
+      ],
+      "metadata": {
+        "id": "LeDE_sDXJP0Y"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "es_mayor_de_edad = lambda edad : edad >= 18"
+      ],
+      "metadata": {
+        "id": "z9tqPYVKNGbk"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "5. Verificar si una palabra es palindromo"
+      ],
+      "metadata": {
+        "id": "hJ-dPabhJSbI"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def es_palindromo(palabra):\n",
+        "    palabra = palabra.lower().replace(\" \", \"\")\n",
+        "    return palabra == palabra[::-1]"
+      ],
+      "metadata": {
+        "id": "ojk0QKxHJW0Y"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "es_palindromo = lambda palabra: palabra.lower().replace(\" \", \"\") == palabra.lower().replace(\" \", \"\")[::-1]\n"
+      ],
+      "metadata": {
+        "id": "hi32dV3aNKoM"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "6. Contar cuantas vocales hay en un texto"
+      ],
+      "metadata": {
+        "id": "vzXfcZNsJZFg"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def contar_vocales(texto):\n",
+        "    texto = texto.lower()\n",
+        "    return sum(1 for letra in texto if letra in 'aeiou')"
+      ],
+      "metadata": {
+        "id": "QynRRNFeJhun"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "contar_vocales = lambda texto: sum(1 for letra in texto.lower() if letra in 'aeiou')\n"
+      ],
+      "metadata": {
+        "id": "Q0vnhQ-ZNWWM"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "7. Sumar todos los numeros de una lista"
+      ],
+      "metadata": {
+        "id": "LhyV5I7AJjzw"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def suma_lista(lista):\n",
+        "    return sum(lista)"
+      ],
+      "metadata": {
+        "id": "Rqa6wfsnJnag"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "suma_lista = lambda lista: sum(lista)\n"
+      ],
+      "metadata": {
+        "id": "OpMpnMQsNaK1"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8. Obtener el mayor y el menor de una lista"
+      ],
+      "metadata": {
+        "id": "uc7HzaJRJpo5"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def max_min(lista):\n",
+        "    return max(lista), min(lista)"
+      ],
+      "metadata": {
+        "id": "r3-dqvSxKJVv"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "max_min = lambda lista: (max(lista), min(lista))\n"
+      ],
+      "metadata": {
+        "id": "o_Amw9EbNc3V"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "9. Ordenar una lista"
+      ],
+      "metadata": {
+        "id": "-rrpgP0YKPQ_"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def ordenar_lista(lista):\n",
+        "    return sorted(lista)"
+      ],
+      "metadata": {
+        "id": "3WoGjCPeKRen"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "ordenar_lista = lambda lista: sorted(lista)"
+      ],
+      "metadata": {
+        "id": "DnWZA9FBNfb0"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "10. Contar cuantos nombres empienzan con vocal"
+      ],
+      "metadata": {
+        "id": "ecSnAO7DKTkf"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def nombres_con_vocal(nombres):\n",
+        "    vocales = 'aeiouAEIOU'\n",
+        "    return sum(1 for nombre in nombres if nombre[0] in vocales)"
+      ],
+      "metadata": {
+        "id": "edeBkKmDKZeH"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nombres_con_vocal = lambda nombres: sum(1 for nombre in nombres if nombre[0].lower() in 'aeiou')\n"
+      ],
+      "metadata": {
+        "id": "kLixa0NtNhvd"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
